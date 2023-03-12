@@ -1,0 +1,387 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --primary-color: #4D455D;
+    --secondary-color: #F5E9CF;
+    --success-color: #7DB9B6;
+    --danger-color: #E96479;
+    --semi-bold: 600;
+    --medium: 500;
+    --regular: 400;
+}
+
+body{
+    background-color: var(--secondary-color);
+}
+small{
+    display: none;
+}
+small.active{
+    display: block;
+    color: var(--danger-color);
+    font-weight: 500;
+    margin-top: 4px;
+}
+.btn {
+    padding: 14px 40px;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: var(--semi-bold);
+    line-height: 20px;
+    cursor: pointer;
+}
+.registered-user-page{
+    max-width: 1720px;
+    margin: auto;
+    padding: 0px 20px;
+    margin-top: 72px;
+}
+.page-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.desc-td{
+    max-width: 240px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.heading{
+    font-size: 44px;
+    font-weight: var(--semi-bold);
+    line-height: 60px;
+    color: var(--primary-color);
+}
+.add-user-btn{
+background-color: var(--primary-color);
+}
+.add-user-btn:hover{
+    box-shadow: 2px 2px 2px rgba(77, 69, 93, 0.5);
+}
+
+/* registration Form */
+.popup-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    display: none;
+}
+.popup-background.active{
+    opacity: 1;
+    display: block;
+}
+.registration-form{
+    max-width: 593px;
+    min-width: 200px;
+    width: 100%;
+    padding: 28px 32px;
+    background-color: #ffffff;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.registration-form > div{
+    position: relative;
+}
+.form-title{
+    font-size: 32px;
+    font-weight: var(--semi-bold);
+    line-height: 42px;
+    color: var(--primary-color);
+    margin-bottom: 24px;
+}
+.close-btn{
+    border: none;
+    background: transparent;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+.close-btn i{
+    font-size: 24px;
+    width: 24px;
+}
+.field-label,
+.form-group .radio-option .radio-field .child-label{
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: var(--regular);
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    margin-top: 16px;
+}
+.input-field{
+    /* height: 48px; */
+    padding: 14px 24px;
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: var(--regular);
+    color: var(--primary-color);
+}
+.form-group .radio-option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.form-group .radio-option .radio-field {
+    margin-right: 14px;
+    display: flex;
+    align-items: center
+}
+.form-group .radio-option .radio-field .radio-input-field:checked + .custom-radio-btn{
+    border: 5px solid var(--primary-color);
+} 
+.form-group .radio-option .radio-field .custom-radio-btn{
+    width: 16px;
+    height:16px;
+    margin-right: 8px;
+    border:1px solid var(--primary-color);
+    display: block;
+    border-radius: 50%;
+}
+.form-group .radio-option .radio-field .child-label{
+    margin-bottom: 0px;
+}
+.form-group .radio-option .radio-field .radio-input-field{
+    width: 16px;
+    height: 16px;
+    display: none;
+}
+.submit-btn .btn{
+width: 100%;
+background-color: var(--success-color);
+margin-top: 12px;
+}
+.submit-btn .btn:hover{
+    box-shadow: 2px 2px 2px rgba(125, 185, 182, .5);
+}
+
+/* registration Form */
+
+
+/* user Table Design */
+.register-user-data{
+    margin-top: 40px;
+}
+.table-tool-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border: 1px solid rgba(77, 69, 93, 0.6);
+    border-bottom: 0px;
+    border-radius: 8px 8px 0px 0px;
+}
+.table-tool-bar .user-count{
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--primary-color);
+    font-weight: var(--semi-bold);
+}
+.search-field{
+    position: relative;
+}
+.search-field i{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: rgba(77, 69, 93, 0.8);
+}
+.search-input-field{
+    background-color: var(--secondary-color);
+    border: 1px solid rgba(77, 69, 93, 0.6);
+    outline: none;
+    width: 264px;
+    /* height: 40px; */
+    font-size: 14px;
+    font-weight: var(--regular);
+    color: var(--primary-color);
+    line-height: 20px;
+    border-radius: 8px;
+    padding: 10px;
+    padding-left: 38px;
+}
+.search-input-field::placeholder{
+    color: rgba(77, 69, 93, 0.6);
+}
+.user-detail-table{
+    width: 100%;
+    margin: 0px;
+    border-spacing: 0px;
+    border: 1px solid rgba(77, 69, 93, 0.6);
+    /* background-color: var(--primary-color); */
+}
+.user-detail-table.border-bottom{
+    border-radius: 0px 0px 8px 8px;
+    padding-bottom: 6px;
+}
+.user-detail-table th,.user-detail-table td{
+   width: 240px;
+    padding: 20px 24px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: var(--medium);
+    text-align: left;
+}
+.user-detail-table tr th{
+    background-color: var(--primary-color);
+    color: white;
+}
+.user-detail-table tr td{
+    color: var(--primary-color);
+    border-bottom: 1px solid rgba(77, 69, 93, 0.6);
+    background-color: var(--secondary-color);
+}
+.edit-btn-td{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.table-btn{
+    background: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+.table-btn i{
+    font-size: 24px;
+}
+
+.table-btn.table-view-btn{
+    padding-top: 2px;
+}
+.table-btn.table-view-btn i{
+    color: var(--success-color);
+    font-size: 22px;
+}
+.table-btn.table-edit-btn i{
+    color: var(--primary-color);
+}
+.table-btn.table-delete-btn i{
+    color: var(--danger-color);
+}
+.no-data-exist{
+    max-height: 510px;
+    border: 1px solid rgba(77, 69, 93, 0.6);
+    height: 100%;
+    min-height: 510px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 0px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.no-data-exist.exist{
+    display: none;
+}
+.no-data-exist .user-not-exist-text{
+    font-size: 44px;
+    line-height: 60px;
+    font-weight: var(--semi-bold);
+    margin-top: 24px;
+    color: var(--primary-color);
+}
+
+/* user Table Design */
+
+/* view Details */
+
+.viewDetails.active{
+    display: block;
+}
+.viewDetails{
+    max-width: 593px;
+    min-width: 200px;
+    width: 100%;
+    padding: 28px 32px;
+    background-color: #ffffff;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease-in-out;
+}
+.viewDetails > div{
+    position: relative;
+}
+.viewDetails .profile-name { 
+    display: flex;
+    align-items: center;
+}
+.viewDetails .profile-name .user-img{
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: var(--success-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+.viewDetails .profile-name .user-img .user-img-text{
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: var(--medium);
+    color: white;
+}
+.viewDetails .profile-name .name h2{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: var(--medium);
+    color: var(--primary-color);
+}
+.viewDetails .profile-name .name h3{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: var(--medium);
+    color: var(--primary-color)
+}
+.viewDetails .user-more-info{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 26px;
+}
+.viewDetails .user-more-info .info-box .label{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: var(--regular);
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+.viewDetails .user-more-info .info-box h3{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: var(--medium);
+    color: var(--primary-color);
+}

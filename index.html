@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>CRUD App</title>
+</head>
+<body>
+    <div class="registered-user-page">
+    <div class="page-title">
+        <h2 class="heading">Registered Users</h2>
+        <button id="add-user" class="add-user-btn btn">Add User</button>
+    </div>
+
+    <!-- User Registration Form -->
+    <div id="registration-form" class="popup-background">
+        <div class="registration-form">
+            <div>
+            <h2 class="form-title">User Registration</h2>
+            <button type="button" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            <form action="" class="form">
+                <div class="form-group">
+                    <label for="fullName" class="field-label">Full Name</label>
+                    <input type="text" name="fullName" id="fullName" class="input-field">
+                    <small></small>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="field-label">Email</label>
+                    <input type="email" name="email" id="email" class="input-field">
+                    <small></small>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNo" class="field-label">Phone Number</label>
+                    <input type="number" name="phoneNo" id="phoneNo" class="input-field">
+                    <small></small>
+                </div>
+                <div class="form-group">
+                    <label for="age" class="field-label">Age</label>
+                    <input type="number" name="age" id="age" class="input-field">
+                    <small></small>
+                </div>
+                <div class="form-group">
+                    <label for="age" class="field-label"> Gander</label>
+                <div class="radio-option">
+                    <div class="radio-field">
+                        <input type="radio" name="gander" value="Male" id="male" class="radio-input-field">
+                    <label class="custom-radio-btn" for="male"></label>
+                        <label for="male" class="child-label">Male</label>
+                    </div>
+                    <div class="radio-field">
+                        <input type="radio" name="gander" id="female" value="Female" class="radio-input-field">
+                        <label class="custom-radio-btn" for="female"></label>
+                        <label for="female" class="child-label">Female</label>
+                    </div>
+                </div>
+                </div>
+                <div class="form-group">
+                    <label for="aboutSelf" class="field-label">Write about your self</label>
+                    <textarea name="aboutSelf" id="aboutSelf" class="input-field" cols="30" rows="4"></textarea>
+                </div>
+                <div class="submit-btn">
+                    <button class="btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+    <!-- Register User Data Table -->
+    <div class="register-user-data">
+        <div class="table-tool-bar">
+            <h2 class="user-count"></h2>
+            <div class="search-field">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input name="searchUser" placeholder="Search" id="search-user" class="search-input-field">
+            </div>
+        </div>
+        <table class="user-detail-table">
+            <thead class="thead">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone No</th>
+                    <th>Age</th>
+                    <th>Gander</th>
+                    <th>Description</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="tbody" id="user-list">
+            </tbody>
+        </table>
+        <div class="no-data-exist">
+                <img src="./images/User Not Found.png" alt="User Not Found"/>
+                <h2 class="user-not-exist-text">User data Not Available</h2>
+        </div>
+    </div>
+
+    <!-- View User Detail Popup -->
+    <div id="viewDetails" class="popup-background">
+        <div class="viewDetails" >
+            <div>
+                <h2 class="form-title">User Registration</h2>
+                <button type="button" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+                <div class="profile-name">
+                    <div class="user-img">
+                        <h2 class="user-img-text"></h2>
+                    </div>
+                    <div class="name">
+                        <h2 class="view-name"></h2>
+                        <h3 class="view-email"></h3>
+                    </div>
+                </div>
+                <div class="user-more-info">
+                    <div class="info-box">
+                        <p class="label">Age</p>
+                        <h3 class="view-age"></h3>
+                    </div>
+                    <div class="info-box">
+                        <p class="label">Phone No</p>
+                        <h3 class="view-phoneNo"></h3>
+                    </div>
+                    <div class="info-box">
+                        <p class="label">Gander</p>
+                        <h3 class="view-gander"></h3>
+                    </div>
+                </div>
+                <div class="user-more-info ">
+                    <div class="info-box">
+                        <p class="label">Description</p>
+                        <h3 class="view-desc"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="./script.js"></script>
+</body>
+</html>
